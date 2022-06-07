@@ -1,24 +1,21 @@
 #include "main.h"
 
 /**
- * main - prints Putchar
+ * main - using the _putchar function
+ * to print out strings.
  *
- * Description: prints _putchar
- *
- * Return: 0 (Success)
+ * Return: 0
  */
-
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
+	int i = 0;
+	char ch[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\0'};
 
+	while (ch[i] != '\0')
+	{
+		_putchar(ch[i]);
+		i++;
+	}
+	_putchar('\n');
 	return (0);
 }
