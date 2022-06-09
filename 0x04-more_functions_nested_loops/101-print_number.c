@@ -1,12 +1,8 @@
 #include "main.h"
-
 /**
- * print_number - a function that prints an integer
- * @n: input
- * Return: inputed integer
- */
+* print_number - that prints an integer
+*@n: print int
+* Return: Always 0.
+*/
 void print_number(int n)
 {
-	_putchar(n + '0');
-	return;
-}
