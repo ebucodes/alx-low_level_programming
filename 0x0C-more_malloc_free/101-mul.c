@@ -1,30 +1,29 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * main - multiplication of two integer positive number
- *
- * Return: product
+ * main - multiplies two positive numbers
+ * @argc: n arguments
+ * @argv: args
+ * Return: int
  */
-int main(void)
+int main(int argc, char *argv[])
 {
-	int num1, num2;
-	int mul = 0;
+unsigned long mul;
+int i, j;
+	if (argc != 3)
+	{ printf("Error\n");
+	exit(98); }
+	for (i = 1; i < argc; i++)
+	{
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (argv[i][j] > 57 || argv[i][j] < 48)
+			{  printf("Error\n");
+			exit(98); }
+		}
 
-	printf("Enter two positive integer number: \n");
-	scanf("%d %d", &num1, &num2);
-	if (num1 <= 0 && num2 <= 0)
-	{
-		exit(98);
 	}
-	if (num1 == NULL && num2 == NULL)
-	{
-		exit(98);
-	}
-
-	while (num2 != 0)
-	{
-		mul += num1;
-		num2--;
-	}
-	printf("\nProduct = %d\n", mul);
-	return (mul);
+	mul = atol(argv[1]) *atol(argv[2]);
+	printf("%lu\n", mul);
+return (0);
 }
