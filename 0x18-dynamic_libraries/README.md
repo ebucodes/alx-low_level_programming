@@ -1,1 +1,1 @@
-# dynamic_libraries
+# C - Dynamic libraries
